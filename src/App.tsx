@@ -5,7 +5,7 @@ function App() {
   const [bin, setBin] = useState("");
   const [dec, setDec] = useState(0);
 
-  const handleBin = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBin = (event: any) => {
     setBin(event.target.value);
   };
 
@@ -13,8 +13,8 @@ function App() {
     setDec(parseInt(bin, 2));
   };
 
-  const onSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
+  const onSubmit = (event: any) => {
+    event.preventDefault();
     convertToDecimal();
   };
 
