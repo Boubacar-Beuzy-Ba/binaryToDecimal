@@ -5,17 +5,14 @@ function App() {
   const [bin, setBin] = useState("");
   const [dec, setDec] = useState(0);
 
-  const handleBin = (e) => {
-    setBin(e.target.value);
+  const handleBin = (event: any) => {
+    setBin(event.target.value);
   };
 
   const convertToDecimal = () => {
     setDec(parseInt(bin, 2));
   };
 
-  const validateBinary = (bin) => {
-    return bin.match(/^[0-1]+$/) != null;
-  };
   const onSubmit = (e) => {
     e.preventDefault();
     convertToDecimal();
